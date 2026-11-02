@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kisanloop – Sell crop residue, skip the smoke</title>
+<meta name="description" content="Kisanloop is an AI app that helps farmers in India sell crop residue to nearby buyers instead of burning it, with low-cost sensors to verify cleaner air.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Mukta:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --field:#1F3D2B; --straw:#E3B94A; --soil:#3A2A1E; --haze:#EEF1E8; --leaf:#5C8A4A; --white:#fff;
+  --display:"Bricolage Grotesque","Mukta",system-ui,sans-serif;
+  --body:"Mukta",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:18px;line-height:1.6;color:var(--soil);background:var(--haze)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--straw);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{background:var(--field);color:var(--haze)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-family:var(--display);font-weight:800;font-size:22px;text-decoration:none;color:var(--straw)}
+.nav a.cta{font-weight:600;text-decoration:none;border:2px solid var(--straw);padding:6px 16px;border-radius:999px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:48px 0 72px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(38px,6vw,64px);line-height:1.05;letter-spacing:-.02em}
+.hindi{font-size:22px;color:var(--straw);margin:16px 0 12px}
+.hero p.sub{max-width:46ch;color:#D5DDCB}
+.btn{display:inline-block;margin-top:24px;background:var(--straw);color:var(--soil);font-weight:600;padding:12px 24px;border-radius:999px;text-decoration:none}
+.loop svg{width:100%;height:auto;display:block}
+section{padding:64px 0}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,4vw,40px);line-height:1.1;margin-bottom:20px;color:var(--field)}
+.problem p{max-width:62ch;margin-bottom:14px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
+.facts div{border-left:4px solid var(--straw);padding-left:14px}
+.facts strong{display:block;font-family:var(--display);font-size:20px;color:var(--field)}
+.steps{list-style:none;padding:0;counter-reset:s;display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.steps li{counter-increment:s;background:var(--white);padding:22px 22px 22px 64px;position:relative;border-radius:6px}
+.steps li::before{content:counter(s);position:absolute;left:20px;top:18px;width:30px;height:30px;border-radius:50%;background:var(--field);color:var(--straw);font-family:var(--display);font-weight:800;display:grid;place-items:center}
+.steps b{font-family:var(--display);color:var(--field);display:block;font-size:19px}
+.azure{background:var(--field);color:var(--haze)}
+.azure h2{color:var(--straw)}
+.azure ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 28px}
+.azure li{border-top:1px solid #4a6b57;padding-top:10px}
+.azure li b{color:var(--straw)}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.team div{background:var(--white);padding:18px;border-radius:6px}
+.team b{font-family:var(--display);display:block;color:var(--field)}
+footer{background:var(--soil);color:#D9CFC3;padding:36px 0;font-size:16px}
+footer a{color:var(--straw)}
+@media(max-width:760px){
+  .hero,.steps,.azure ul,.facts{grid-template-columns:1fr}
+  .hero{padding-bottom:48px}
+  body{font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="#top">Kisanloop</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+    <div class="hero" id="top">
+      <div>
+        <h1>Sell the straw. Skip the smoke.</h1>
+        <p class="hindi" lang="hi">पराली जलाएँ नहीं, बेचें।</p>
+        <p class="sub">Kisanloop is an AI app that helps farmers turn leftover crop residue into income by matching it with nearby buyers, and uses low-cost air sensors to show the air getting cleaner.</p>
+        <a class="btn" href="#how">See how it works</a>
+      </div>
+      <div class="loop">
+        <svg viewBox="0 0 360 360" role="img" aria-label="Loop: Farm, Residue, Buyer, Clean air, back to Farm">
+          <circle cx="180" cy="180" r="120" fill="none" stroke="#E3B94A" stroke-width="3" stroke-dasharray="8 8"/>
+          <g font-family="Bricolage Grotesque, Mukta, sans-serif" font-weight="800" font-size="17" text-anchor="middle">
+            <circle cx="180" cy="60" r="44" fill="#5C8A4A"/><text x="180" y="66" fill="#fff">Farm</text>
+            <circle cx="300" cy="180" r="44" fill="#E3B94A"/><text x="300" y="186" fill="#3A2A1E">Residue</text>
+            <circle cx="180" cy="300" r="44" fill="#EEF1E8"/><text x="180" y="306" fill="#1F3D2B">Buyer</text>
+            <circle cx="60" cy="180" r="44" fill="#9CC3D5"/><text x="60" y="186" fill="#1F3D2B">Clean air</text>
+          </g>
+          <path d="M214 84 l12 -4 l-4 12" fill="none" stroke="#E3B94A" stroke-width="3"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="problem">
+  <div class="wrap">
+    <h2>Farmers burn residue because selling it is hard</h2>
+    <p>After harvest, farmers have a short window to clear their fields. Burning is the fastest and cheapest option, and it fills the air with PM2.5 across north India, including Bihar.</p>
+    <p>There are buyers for this straw: biomass plants, bio-CNG units, cattle-feed makers and paper mills. Farmers just can't find them, price the residue or arrange pickup in time.</p>
+    <div class="facts">
+      <div><strong>No buyer access</strong>Farmers don't know who is buying nearby.</div>
+      <div><strong>No fair price</strong>Rates change by place and week.</div>
+      <div><strong>No proof</strong>Nobody measures local air before and after.</div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:#E3E8DA">
+  <div class="wrap">
+    <h2>How Kisanloop works</h2>
+    <ol class="steps">
+      <li><b>Farmer sends a photo or voice note</b>In Hindi, through the app or WhatsApp. No typing needed.</li>
+      <li><b>AI estimates the residue</b>Type of crop and quantity, read from the photo.</li>
+      <li><b>We match a nearby buyer</b>With a fair price and a pickup date.</li>
+      <li><b>Sensors check the air</b>Low-cost PM2.5 sensors show if burning went down in the village.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="azure">
+  <div class="wrap">
+    <h2>Built with Microsoft Azure AI</h2>
+    <ul>
+      <li><b>Azure AI Vision</b><br>Reads residue photos to estimate quantity.</li>
+      <li><b>Azure AI Speech + Azure OpenAI</b><br>Hindi voice assistant for farmers.</li>
+      <li><b>Azure Machine Learning</b><br>PM2.5 forecasts and buyer matching.</li>
+      <li><b>Azure IoT Hub</b><br>Connects the low-cost air sensors.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Founder</h2>
+    <div class="team">
+      <div><b>Arnav</b>Founder</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <p><strong>Kisanloop</strong> is an early-stage student startup from Patna, Bihar, India, entered in Microsoft Imagine Cup 2027.</p>
+    <p>Contact: <a href="mailto:arnavchandravanshi229@gmail.com">arnavchandravanshi229@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
